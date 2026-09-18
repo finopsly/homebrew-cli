@@ -10,7 +10,7 @@ class Finopsly < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/finopsly/finopsly-pulse-cli/releases/download/v1.0.0/finopsly_darwin_amd64.tar.gz"
-      sha256 "de9bb933c58e5ce1b3ec7c53af8e1b4d0ea64961743cd2b6ea2c4b09620aa583"
+      sha256 "1b297ee9ad26e443a1e5d222e4baee72b1ea8fffdad76561822a7cd1c7654014"
 
       define_method(:install) do
         bin.install "finopsly"
@@ -18,7 +18,7 @@ class Finopsly < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/finopsly/finopsly-pulse-cli/releases/download/v1.0.0/finopsly_darwin_arm64.tar.gz"
-      sha256 "f466d38587d41449f7ae4c1205c35f936eca114dd59d1ce87029abc797f1912e"
+      sha256 "d2d9a62622e2a6a36c1dda240a3101e069e9389a3c91ac0987bd64a936879ca3"
 
       define_method(:install) do
         bin.install "finopsly"
@@ -29,14 +29,14 @@ class Finopsly < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/finopsly/finopsly-pulse-cli/releases/download/v1.0.0/finopsly_linux_amd64.tar.gz"
-      sha256 "89520f05e6cacf5c65726733243e7d2a368151aa5913039ce581afb3c7e94114"
+      sha256 "d04d395585c7241e1f02af80f49bd9771ad6efe8f7637fb429eaf54d94675e04"
       define_method(:install) do
         bin.install "finopsly"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/finopsly/finopsly-pulse-cli/releases/download/v1.0.0/finopsly_linux_arm64.tar.gz"
-      sha256 "18a58a37984a29f927e64501a154a0c5b31648336d708697eacb14c7df1e6003"
+      sha256 "75036d281901460ff78c5aa2c1c13960a01f419127a9660b5b033083f20c3cf0"
       define_method(:install) do
         bin.install "finopsly"
       end
